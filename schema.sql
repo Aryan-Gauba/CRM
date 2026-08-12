@@ -39,7 +39,7 @@ CREATE TABLE public.call_logs (
 );
 
 
-ALTER TABLE public.call_logs OWNER TO postgres;
+ALTER TABLE public.call_logs ;
 
 --
 -- TOC entry 222 (class 1259 OID 16941)
@@ -55,7 +55,7 @@ CREATE SEQUENCE public.call_logs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.call_logs_id_seq OWNER TO postgres;
+ALTER TABLE public.call_logs_id_seq ;
 
 --
 -- TOC entry 3409 (class 0 OID 0)
@@ -84,7 +84,7 @@ CREATE TABLE public.customers (
 );
 
 
-ALTER TABLE public.customers OWNER TO postgres;
+ALTER TABLE public.customers ;
 
 --
 -- TOC entry 216 (class 1259 OID 16889)
@@ -100,7 +100,7 @@ CREATE SEQUENCE public.customers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.customers_id_seq OWNER TO postgres;
+ALTER TABLE public.customers_id_seq ;
 
 --
 -- TOC entry 3410 (class 0 OID 0)
@@ -135,7 +135,7 @@ CREATE TABLE public.leads (
 );
 
 
-ALTER TABLE public.leads OWNER TO postgres;
+ALTER TABLE public.leads ;
 
 --
 -- TOC entry 218 (class 1259 OID 16901)
@@ -151,7 +151,7 @@ CREATE SEQUENCE public.leads_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.leads_id_seq OWNER TO postgres;
+ALTER TABLE public.leads_id_seq ;
 
 --
 -- TOC entry 3411 (class 0 OID 0)
@@ -176,7 +176,7 @@ CREATE TABLE public.messages (
 );
 
 
-ALTER TABLE public.messages OWNER TO postgres;
+ALTER TABLE public.messages ;
 
 --
 -- TOC entry 224 (class 1259 OID 16962)
@@ -192,7 +192,7 @@ CREATE SEQUENCE public.messages_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.messages_id_seq OWNER TO postgres;
+ALTER TABLE public.messages_id_seq ;
 
 --
 -- TOC entry 3412 (class 0 OID 0)
@@ -217,7 +217,7 @@ CREATE TABLE public.organizations (
 );
 
 
-ALTER TABLE public.organizations OWNER TO postgres;
+ALTER TABLE public.organizations ;
 
 --
 -- TOC entry 226 (class 1259 OID 16977)
@@ -233,7 +233,7 @@ CREATE SEQUENCE public.organizations_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.organizations_id_seq OWNER TO postgres;
+ALTER TABLE public.organizations_id_seq ;
 
 --
 -- TOC entry 3413 (class 0 OID 0)
@@ -264,7 +264,7 @@ CREATE TABLE public.tasks (
 );
 
 
-ALTER TABLE public.tasks OWNER TO postgres;
+ALTER TABLE public.tasks ;
 
 --
 -- TOC entry 220 (class 1259 OID 16917)
@@ -280,7 +280,7 @@ CREATE SEQUENCE public.tasks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tasks_id_seq OWNER TO postgres;
+ALTER TABLE public.tasks_id_seq ;
 
 --
 -- TOC entry 3414 (class 0 OID 0)
@@ -308,7 +308,7 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO postgres;
+ALTER TABLE public.users ;
 
 --
 -- TOC entry 214 (class 1259 OID 16876)
@@ -324,7 +324,7 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO postgres;
+ALTER TABLE public.users_id_seq ;
 
 --
 -- TOC entry 3415 (class 0 OID 0)

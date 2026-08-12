@@ -90,13 +90,11 @@ io.on('connection', (socket) => {
   });
 });
 
-// Export app module for Vercel Serverless Function handling
+// Export app module for Vercel Serverless Function handling (if needed)
 module.exports = app;
 
-// Fallback for local development execution
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = process.env.PORT || 5000;
-  server.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
-}
+// Always start the server on Render / Local (using Render's dynamic PORT)
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
