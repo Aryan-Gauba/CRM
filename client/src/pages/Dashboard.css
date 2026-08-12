@@ -1,0 +1,159 @@
+/* client/src/pages/Dashboard.css */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.metric-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.12);
+}
+
+.metric-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+}
+
+.dashboard-widgets {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.widget-card {
+  background: var(--card-bg);
+  padding: 1.75rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.widget-card h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-info strong {
+  display: block;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.task-info span {
+  font-size: 0.75rem;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  margin-top: 0.35rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.task-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --- Responsive Dashboard Styles for Tablets & Mobile --- */
+
+@media (max-width: 1024px) {
+  .dashboard-widgets {
+    grid-template-columns: 1fr !important; /* Stack widgets vertically on tablets/small laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .metric-card {
+    padding: 1.25rem;
+  }
+
+  .metric-value {
+    font-size: 1.85rem;
+  }
+
+  .widget-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-grid {
+    grid-template-columns: 1fr; /* Full width cards on mobile screens */
+  }
+}

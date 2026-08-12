@@ -1,0 +1,189 @@
+/* client/src/pages/TableStyles.css */
+.primary-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.primary-btn:hover {
+  background-color: #2563eb;
+}
+
+.primary-btn:active {
+  transform: scale(0.98);
+}
+
+.table-container {
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.crm-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.crm-table th, .crm-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.crm-table th {
+  background-color: var(--sidebar-hover);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge {
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Modern Status Badges */
+.new-lead { background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.contacted { background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.qualified { background-color: rgba(16, 185, 129, 0.1); color: #10b981; }
+.won { background-color: rgba(16, 185, 129, 0.15); color: #059669; }
+.lost { background-color: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+/* Toggles and Links */
+.toggle-btn {
+  background: var(--card-bg); 
+  border: 1px solid var(--border-color); 
+  padding: 0.6rem 1rem; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.toggle-btn.active {
+  background: #3b82f6; color: white; border-color: #3b82f6;
+}
+.action-link {
+  background: none; border: none; color: #3b82f6; cursor: pointer; font-weight: 600; margin-right: 12px; font-size: 0.85rem;
+}
+.action-link:hover {
+  text-decoration: underline;
+}
+.text-danger { color: #ef4444; }
+
+.crm-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.25rem;
+}
+
+.crm-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Kanban Board Layout */
+.kanban-board {
+  display: flex; gap: 1.25rem; overflow-x: auto; padding-bottom: 1rem; align-items: flex-start;
+}
+
+.kanban-column {
+  min-width: 300px; 
+  background: var(--sidebar-hover); 
+  border-radius: 12px; 
+  padding: 1.25rem; 
+  border: 1px solid var(--border-color); 
+  display: flex; 
+  flex-direction: column;
+}
+
+.kanban-col-header {
+  margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);
+}
+
+.kanban-cards-container {
+  display: flex; flex-direction: column; gap: 0.85rem;
+}
+
+.kanban-card {
+  background: var(--card-bg); 
+  padding: 1.25rem; 
+  border-radius: 10px; 
+  box-shadow: var(--shadow); 
+  border: 1px solid var(--border-color);
+  transition: transform 0.15s ease;
+}
+
+.kanban-card:hover {
+  transform: translateY(-2px);
+}
+
+.kanban-card h4 { margin: 0 0 0.25rem 0; color: var(--text-color); font-size: 1rem; font-weight: 600; }
+.kanban-card p { margin: 0 0 1rem 0; color: var(--text-muted); font-size: 0.85rem; }
+
+.kanban-card-actions {
+  display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 0.75rem;
+}
+
+.quick-status-select {
+  padding: 0.35rem 0.5rem; font-size: 0.8rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color);
+}
+
+/* Ensure table data text matches current theme */
+.crm-table td {
+  color: var(--text-color);
+}
+
+/* Fix strategic insight paragraph or description text if rendered inside table */
+.crm-table td:last-child {
+  color: var(--text-muted);
+}
+
+/* --- Responsive Tables & Kanban Scroll Fixes --- */
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Allows horizontal scrolling on small screens instead of breaking layout */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .crm-table th, .crm-table td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap; /* Prevents text squeezing awkwardly */
+  }
+
+  .kanban-board {
+    gap: 1rem;
+  }
+
+  .kanban-column {
+    min-width: 260px;
+    padding: 1rem;
+  }
+}
