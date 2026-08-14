@@ -31,7 +31,7 @@ const scoreLead = async (req, res) => {
 
     const chatCompletion = await groq.chat.completions.create({
       messages: [{ role: 'user', content: prompt }],
-      model: 'llama-3.1-8b-instant',
+      model: process.env.AI_MODEL || 'llama-3.3-70b-versatile',
       response_format: { type: 'json_object' }
     });
 
